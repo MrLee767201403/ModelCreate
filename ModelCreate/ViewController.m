@@ -22,12 +22,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [self loadData];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(50, 200, 275, 30)];
+    [button setTitle:@"生成模型文件" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(loadData) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    button.layer.cornerRadius = 5;
+    button.layer.masksToBounds = YES;
+    button.layer.borderWidth = 1.0;
+    button.layer.borderColor = [UIColor redColor].CGColor;
+    [self.view addSubview:button];
 }
 
 - (void)loadData{
     // 1.创建url
-    NSURL * url = [NSURL URLWithString:@"你请求的URL"];
+    NSURL * url = [NSURL URLWithString:@"http://120.27.97.153:8080/fieldwork/api/student/get?id=101095"];
     // 2.创建session对象
     NSURLSession * session = [NSURLSession sharedSession];
     // 系统提供的全局的NSURLSession对象，单例
