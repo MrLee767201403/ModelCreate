@@ -42,3 +42,18 @@
 
 [task resume];
 
+#效果图
+运行后会自动打印出文件地址
+![image](https://github.com/MrLee767201403/ModelCreate/blob/master/QQ20171130-135848%402x.png)
+
+前往文件夹
+![image](https://github.com/MrLee767201403/ModelCreate/blob/master/QQ20171130-135929%402x.png)
+
+这些就是自动生成的模型文件了,直接拖进自己的工程使用就行
+![image](https://github.com/MrLee767201403/ModelCreate/blob/master/QQ20171130-135946%402x.png)
+
+随便打开一个看一下, 对于字段于关键字冲突的,我们提供了后期维护的方法,按照图片所示,对.h和.m文件稍加修改即可
+![image](https://github.com/MrLee767201403/ModelCreate/blob/master/QQ20171130-140223%402x.png)
+
+这是.m文件
+![image](https://github.com/MrLee767201403/ModelCreate/blob/master/QQ20171130-140543%402x.png)
