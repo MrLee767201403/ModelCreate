@@ -35,7 +35,7 @@
 
 - (void)loadData{
     // 1.创建url
-    NSURL * url = [NSURL URLWithString:@"http://120.27.97.153:8080/fieldwork/api/student/get?id=101095"];
+    NSURL * url = [NSURL URLWithString:@"你请求数据的URL"];
     // 2.创建session对象
     NSURLSession * session = [NSURLSession sharedSession];
     // 系统提供的全局的NSURLSession对象，单例
