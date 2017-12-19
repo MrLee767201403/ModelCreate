@@ -36,6 +36,13 @@
 - (void)loadData{
     // 1.创建url
     NSURL * url = [NSURL URLWithString:@"你请求数据的URL"];
+    if (url == nil) {
+        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"提示" message:@"请先设置你请求的URL" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
+        [alertVC addAction:cancel];
+        [self presentViewController:alertVC animated:YES completion:nil];
+        return;
+    }
     // 2.创建session对象
     NSURLSession * session = [NSURLSession sharedSession];
     // 系统提供的全局的NSURLSession对象，单例
